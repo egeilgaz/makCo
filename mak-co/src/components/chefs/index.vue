@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col bg-white px-3 py-16">
+  <div class="flex flex-col bg-white px-8 py-16 lg:px-16">
     <div>
       <img
         class="w-40 h-40 rounded-full mx-auto mb-8"

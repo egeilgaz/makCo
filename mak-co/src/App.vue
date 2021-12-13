@@ -18,7 +18,7 @@
       <div class="bg-white pt-4 md:pt-16 text-3xl md:text-4xl font-serif">
         Meet the chefs
       </div>
-      <div class="md:grid md:grid-cols-2">
+      <div class="md:grid md:grid-cols-2 lg:w-128 lg:mx-auto xl:w-257">
         <chefs v-for="index in 4" :key="index" />
       </div>
       <head-lines

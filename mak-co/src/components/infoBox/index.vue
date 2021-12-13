@@ -11,7 +11,7 @@
       <!-- <div class="cursor-pointer">Learn More</div> -->
     </div>
     <div class="hidden md:flex">
-      <div class="md:pt-14 md:w-2/3 md:px-16 md:bg-white lg:hidden">
+      <div class="md:pt-14 md:w-80 md:px-16 md:bg-white lg:hidden">
         <img class="rounded-lg" src="../../assets/food-1.jpg" alt="" />
       </div>
     </div>

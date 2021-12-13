@@ -22,8 +22,8 @@
     <div class="flex justify-center">
       <!-- <div class="px-5 text-green-600">facebook</div>
       <div class="px-5 text-green-600">instagram</div> -->
-      <svgIcon name="facebook" class="h-12 w-12 mx-2 bg-white rounded-full" />
-      <svgIcon name="aaa" class="h-12 w-12 bg-white rounded-lg" />
+      <svgIcon name="facebook" class="h-8 w-8 mx-2 bg-white rounded-full" />
+      <svgIcon name="aaa" class="h-8 w-8 bg-white rounded-lg" />
     </div>
   </div>
 </template>

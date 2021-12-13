@@ -1,7 +1,10 @@
 <template>
-  <div class="bg-primary-100 px-5 mb-24">
+  <div class="bg-primary-100 px-5 mb-24 xl:justify-center">
       <tab-menu />
-      <menu-item v-for="index in 5" :key="index" />
+      <div class="2xl:mx-auto 2xl:w-128">
+        <menu-item v-for="index in 5" :key="index" />
+      </div>
+      
 
   </div>
 </template>

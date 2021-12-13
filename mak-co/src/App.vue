@@ -6,7 +6,7 @@
         :firstLine="firstObject.firstLine"
         :secondLine="firstObject.secondLine"
       />
-      <div class="md:grid md:grid-cols-1 ml-10">
+      <div class="md:grid md:grid-cols-1">
         <info-box
           class="mb-4"
           v-for="content in contents"
@@ -14,19 +14,24 @@
           :key="content"
         />
       </div>
-      <!-- buraya resim gelcek 3 tane -->
-
       <location-box />
-      <div class="bg-white pt-4 text-3xl font-serif">Meet the chefs</div>
-      <chefs v-for="index in 4" :key="index" />
+      <div class="bg-white pt-4 md:pt-16 text-3xl md:text-4xl font-serif">
+        Meet the chefs
+      </div>
+      <div class="md:grid md:grid-cols-2">
+        <chefs v-for="index in 4" :key="index" />
+      </div>
       <head-lines
         :firstLine="secondObject.firstLine"
         :secondLine="secondObject.secondLine"
       />
-      <menu-comp />
+      <menu-comp class="md:px-24 xl:mx-48" />
       <services />
       <googleMap />
-      <footer-comp />
+      <div class="md:mx-auto bg-black">
+        <footer-comp />
+      </div>
+      
     </div>
   </div>
 </template>

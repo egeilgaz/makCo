@@ -2,6 +2,11 @@
   <div id="app">
     <div class="bg-primary-100">
       <header-comp />
+      <div class="pt-16">
+        <welcome-comp />
+      </div>
+      
+
       <head-lines
         :firstLine="firstObject.firstLine"
         :secondLine="firstObject.secondLine"
@@ -21,8 +26,10 @@
       <div class="bg-white pt-4 md:pt-16 text-3xl md:text-4xl font-serif">
         Meet the chefs
       </div>
-      <div class="md:grid md:grid-cols-2 lg:w-128 lg:mx-auto xl:w-257">
-        <chefs v-for="index in 4" :key="index" />
+      <div class="bg-white">
+        <div class="md:grid md:grid-cols-2 lg:w-128 lg:mx-auto xl:w-257">
+          <chefs v-for="index in 4" :key="index" />
+        </div>
       </div>
       <head-lines
         :firstLine="secondObject.firstLine"
@@ -49,6 +56,7 @@ import services from "../src/components/services";
 import googleMap from "../src/components/googleMap";
 import footerComp from "../src/components/footer";
 import bigInfoBox from "../src/components/bigInfoBox";
+import welcomeComp from "../src/components/welcomeComp";
 
 export default {
   name: "App",
@@ -63,6 +71,7 @@ export default {
     googleMap,
     footerComp,
     bigInfoBox,
+    welcomeComp,
   },
   data() {
     return {

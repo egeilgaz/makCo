@@ -19,7 +19,7 @@
           </div>
         </div>
       </div>
-      <div class="text-red-400">$10.49</div>
+      <div class="text-green-600">$10.49</div>
     </div>
   </div>
 </template>

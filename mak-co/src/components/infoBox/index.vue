@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center">
     <div class="bg-white font-serif flex flex-col ml-3 py-10 px-8">
-      <div class="text-red-300 text-lg tracking-widest mb-2">
+      <div class="text-green-400 text-lg tracking-widest mb-2">
         {{ content.firstHeader }}
       </div>
       <div class="text-black text-xl mb-8">{{ content.secondHeader }}</div>

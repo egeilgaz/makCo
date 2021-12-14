@@ -6,13 +6,16 @@
         :firstLine="firstObject.firstLine"
         :secondLine="firstObject.secondLine"
       />
-      <div class="md:grid md:grid-cols-1">
+      <div class="md:grid md:grid-cols-1 lg:hidden">
         <info-box
           class="mb-4"
           v-for="content in contents"
           :content="content"
-          :key="content"
+          :key="content.id"
         />
+      </div>
+      <div class="hidden lg:flex">
+        <big-info-box />
       </div>
       <location-box />
       <div class="bg-white pt-4 md:pt-16 text-3xl md:text-4xl font-serif">
@@ -31,7 +34,6 @@
       <div class="md:mx-auto bg-black">
         <footer-comp />
       </div>
-      
     </div>
   </div>
 </template>
@@ -46,6 +48,7 @@ import menuComp from "../src/components/menu";
 import services from "../src/components/services";
 import googleMap from "../src/components/googleMap";
 import footerComp from "../src/components/footer";
+import bigInfoBox from "../src/components/bigInfoBox";
 
 export default {
   name: "App",
@@ -59,6 +62,7 @@ export default {
     services,
     googleMap,
     footerComp,
+    bigInfoBox,
   },
   data() {
     return {
@@ -72,22 +76,28 @@ export default {
       },
       contents: [
         {
+          id: 1,
           firstHeader: "VEGIES",
           secondHeader: "BEEF EMPANADAS",
           content:
             "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
+          photoUrl: "food-1.jpg",
         },
         {
+          id: 2,
           firstHeader: "FOOD",
           secondHeader: "BUTTERMILK CHICKEN JIBARITOS",
           content:
             "A small river named Duden flows by their place and supplies it with the necessary regelialia.",
+          photoUrl: "food-2.jpg",
         },
         {
+          id: 3,
           firstHeader: "FOOD",
           secondHeader: "CHICKEN CHIMICHURRI CROQUETTES",
           content:
             "Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life.",
+          photoUrl: "food-3.jpg",
         },
       ],
     };

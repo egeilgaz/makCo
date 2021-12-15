@@ -2,11 +2,9 @@
   <div id="app">
     <div class="bg-primary-100">
       <header-comp />
-      <div class="pt-16">
+      <div class="">
         <welcome-comp />
       </div>
-      
-
       <head-lines
         :firstLine="firstObject.firstLine"
         :secondLine="firstObject.secondLine"

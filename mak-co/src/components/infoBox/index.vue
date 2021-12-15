@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center">
-    <div class="bg-white font-serif flex flex-col ml-3 py-10 px-8">
+  <div class="flex justify-center mx-3">
+    <div class="bg-white font-serif flex flex-col py-10 px-8">
       <div class="text-green-400 text-lg tracking-widest mb-2">
         {{ content.firstHeader }}
       </div>

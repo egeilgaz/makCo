@@ -33,7 +33,7 @@ export default {
   computed: {},
   methods: {
     openMenu() {
-      console.log("kardeşim ub method menuyu açsın.");
+      
     },
     updateScroll() {
       if (window.scrollY > 200) {
@@ -41,7 +41,6 @@ export default {
       } else {
         this.scrollTop = false;
       }
-      console.log(window.scrollY);
     },
   },
   mounted() {

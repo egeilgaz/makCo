@@ -1,9 +1,13 @@
 <template>
   <div>
-    <div class="fixed w-full z-20">
+    <div class="fixed w-full z-50">
       <div
         class="h-28 md:h-32 grid grid-cols-3 transform"
-        :class="scrollTop ? 'bg-white  translate-y-0 ease-in-out transition duration-500' : ' -translate-y-0 duration-500 '"
+        :class="
+          scrollTop
+            ? 'bg-white  translate-y-0 ease-in-out transition duration-500'
+            : ' -translate-y-0 duration-500 '
+        "
       >
         <div class="flex flex-row-reverse py-5 pl-6"></div>
         <div class="w-20 h-20 md:w-24 md:h-24 mx-auto my-auto">
@@ -20,7 +24,7 @@
       </div>
     </div>
     <div>
-      <sideMenu :menuOpen="menuStatus" />
+      <sideMenu :menuOpen="menuStatus" @toggle="toggle" />
     </div>
   </div>
 </template>
@@ -45,6 +49,9 @@ export default {
       } else {
         this.scrollTop = false;
       }
+    },
+    toggle() {
+      this.menuStatus = !this.menuStatus;
     },
   },
   mounted() {

@@ -7,7 +7,7 @@
       ><div class="border-2 border-white bg-black inline-block p-4">
           WELCOME TO MAKCO
       </div>
-      <div class="text-green-600 text-4xl mt-16" >
+      <div class="text-green-600 text-4xl mt-16 transform translate-y-6" >
         EAT REAL FOOD
       </div>
         

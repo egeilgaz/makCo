@@ -1,15 +1,21 @@
 <template>
-  <div
-    v-if="menuOpen"
-    class="h-screen w-80 z-10 bg-white fixed absolute top-0 right-0"
-  >
-    <div class="my-56">
-      <div
-        class="mb-6 text-xl"
-        v-for="menuItem in menuItems"
-        :key="menuItem.id"
-      >
-        {{ menuItem.name }}
+  <div>
+    <div class="fixed inset-0 flex z-40">
+      <div class="absolute flex top-0 h-screen z-20 right-0 flex-row">
+        <div
+          class="transition-all duration-700 bg-white overflow-hidden flex items-center justify-center w-72"
+          :class="[menuOpen ? 'max-w-lg' : 'max-w-0']"
+        >
+          <div class="flex flex-col">
+            <div
+              v-for="menuItem in menuItems"
+              :key="menuItem.id"
+              class="w-48 text-center font-semibold text-xl py-5"
+            >
+              {{ menuItem.name }}
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -25,6 +31,7 @@ export default {
   },
   data() {
     return {
+      dimmer: true,
       menuItems: [
         { id: 1, name: "Ana Sayfa" },
         { id: 2, name: "Restaurant" },
@@ -33,6 +40,7 @@ export default {
       ],
     };
   },
+  methods: {},
 };
 </script>
 

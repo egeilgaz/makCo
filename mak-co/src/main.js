@@ -1,13 +1,24 @@
-import Vue from 'vue'
-import App from './App.vue'
-import './assets/tailwind.css'
+import Vue from "vue"
+import App from "./App.vue"
+import "./assets/tailwind.css"
 import svgIcon from "./components/icons/svgIcon.vue"
+import VueRouter from "vue-router"
 
+Vue.use(VueRouter);
 
-Vue.config.productionTip = false
+const router = new VueRouter({
+  mode: "history",
+  base: process.env.BASE_URL,
+  scrollBehavior(to, from) {
+    if (to.name != from.name) return { x: 0, y: 0 }
+  }
+})
 
-Vue.component("svgIcon", svgIcon)
+Vue.config.productionTip = false;
+
+Vue.component("svgIcon", svgIcon);
 
 new Vue({
-  render: h => h(App)
-}).$mount('#app')
+  router,
+  render: (h) => h(App),
+}).$mount("#app");

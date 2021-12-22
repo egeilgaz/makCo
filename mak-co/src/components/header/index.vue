@@ -24,7 +24,7 @@
       </div>
     </div>
     <div>
-      <sideMenu :menuOpen="menuStatus" @toggle="toggle" />
+      <sideMenu :menuOpen="menuStatus" @toggle="toggle" @scrollMeTo="$emit('scrollMeTo', $event)" />
     </div>
   </div>
 </template>

@@ -3,9 +3,10 @@
     <div
       v-for="header in headers"
       :key="header"
-      class="border-b-4 border-solid mx-1 text-green-600 border-green-600"
+      class="border-b-4 border-solid mx-1 text-black border-black"
+      :class="isActive ? 'text-green-600 border-green-600' : null "
     >
-      <div class="p-3 font-semibold uppercase">{{header.header}}</div>
+      <div class="p-3 font-semibold uppercase">{{ header.header }}</div>
     </div>
   </div>
 </template>

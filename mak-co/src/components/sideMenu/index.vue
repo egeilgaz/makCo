@@ -12,11 +12,20 @@
               :key="menuItem.id"
               class="w-48 text-center font-semibold text-xl py-5"
             >
-              {{ menuItem.name }}
+              <div @click="$emit('scrollMeTo',menuItem.link),$emit('toggle')" class="cursor-pointer">
+                {{ menuItem.name }}
+              </div>
             </div>
           </div>
         </div>
       </div>
+      <transition name="fade">
+        <div
+          v-if="dimmer && menuOpen"
+          @click="$emit('toggle')"
+          class="flex-1 bg-gray-400 bg-opacity-75 active:outline-none z-10"
+        />
+      </transition>
     </div>
   </div>
 </template>
@@ -33,14 +42,15 @@ export default {
     return {
       dimmer: true,
       menuItems: [
-        { id: 1, name: "Ana Sayfa" },
-        { id: 2, name: "Restaurant" },
-        { id: 3, name: "Menu" },
-        { id: 4, name: "İletişim" },
+        { id: 1, name: "Ana Sayfa" ,link:"home"},
+        { id: 2, name: "Restaurant",link:"restaurant" },
+        { id: 3, name: "Menu",link:"menu" },
+        { id: 4, name: "İletişim",link:"contact" },
       ],
     };
   },
-  methods: {},
+  methods: {
+  },
 };
 </script>
 

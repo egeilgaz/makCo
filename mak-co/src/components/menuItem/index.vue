@@ -12,20 +12,26 @@
           />
         </div>
         <div class="lg:flex lg:flex-col lg:ml-4">
-          <div class="text-2xl mb-2">Warm Spinach Dip</div>
+          <div class="text-2xl mb-2">{{ menuItem.title }}</div>
           <div class="text-xl text-gray-400 mb-3">
-            Spinach and artichokes in a creamy cheese dip with warm tortilla
-            chips & salsa.
+            {{ menuItem.content }}
           </div>
         </div>
       </div>
-      <div class="text-green-600">$10.49</div>
+      <div class="text-green-600">{{ menuItem.price }}</div>
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    menuItem: {
+      type: Object,
+      default: () => {},
+    },
+  },
+};
 </script>
 
 <style></style>

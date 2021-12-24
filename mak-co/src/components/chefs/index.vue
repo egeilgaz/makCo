@@ -22,14 +22,29 @@
     <div class="flex justify-center">
       <!-- <div class="px-5 text-green-600">facebook</div>
       <div class="px-5 text-green-600">instagram</div> -->
-      <svgIcon name="facebook" class="h-8 w-8 mx-2 rounded-full" />
-      <svgIcon name="aaa" class="h-8 w-8 bg-white rounded-lg" />
+      <svgIcon
+        name="facebook"
+        class="h-8 w-8 mx-2 rounded-full cursor-pointer"
+        :class="menuStatus ? ' z-0' : 'z-40'"
+      />
+      <svgIcon
+        name="aaa"
+        class="h-8 w-8 bg-white rounded-lg cursor-pointer"
+        :class="menuStatus ? ' z-0' : 'z-40'"
+      />
     </div>
   </div>
 </template>
 
 <script>
-export default {};
+export default {
+  props: {
+    menuStatus: {
+      type: Boolean,
+      default: false,
+    },
+  },
+};
 </script>
 
 <style></style>

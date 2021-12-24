@@ -1,5 +1,5 @@
 <template>
-  <div class="bg-primary-100 py-36 font-serif">
+  <div class="bg-primary-100 py-24 font-serif">
     <div class="px-5">
       <div class="text-black text-2xl md:text-4xl xl:text-5xl mb-8">
         {{ firstLine }}

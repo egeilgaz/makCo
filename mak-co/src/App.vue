@@ -1,7 +1,11 @@
 <template>
   <div id="app">
     <div class="bg-primary-100">
-      <header-comp @scrollMeTo="scrollMeTo" />
+      <header-comp
+        @scrollMeTo="scrollMeTo"
+        @toggle="toggle"
+        :menuStatus="menuStatus"
+      />
 
       <div ref="home">
         <welcome-comp />
@@ -35,7 +39,7 @@
 
       <div class="bg-white">
         <div class="md:grid md:grid-cols-2 lg:w-128 lg:mx-auto xl:w-257">
-          <chefs v-for="index in 4" :key="index" />
+          <chefs v-for="index in 4" :key="index" :menuStatus="menuStatus" />
         </div>
       </div>
 
@@ -44,7 +48,7 @@
           :firstLine="secondObject.firstLine"
           :secondLine="secondObject.secondLine"
         />
-        <menu-comp class="md:px-24 xl:mx-48" />
+        <menu-comp class="md:px-24 xl:mx-48" :menuStatus="menuStatus" />
       </div>
 
       <services />
@@ -90,13 +94,14 @@ export default {
   },
   data() {
     return {
+      menuStatus: false,
       firstObject: {
         firstLine: "Find your best food",
         secondLine: "Free Website Template For Restaurants Made by Colorlib",
       },
       secondObject: {
         firstLine: "Menu",
-        secondLine: "Free Website Template For Restaurants Made by Colorlib",
+        secondLine: "En çok tercih edilen 5 makarnamız",
       },
       contents: [
         {
@@ -131,6 +136,9 @@ export default {
       var element = this.$refs[e];
       var top = element.offsetTop - 155;
       window.scrollTo(0, top);
+    },
+    toggle() {
+      this.menuStatus = !this.menuStatus;
     },
   },
 };

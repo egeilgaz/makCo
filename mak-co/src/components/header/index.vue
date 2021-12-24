@@ -15,7 +15,7 @@
         </div>
         <div class="flex flex-row-reverse py-8 px-4">
           <div
-            @click="menuStatus = !menuStatus"
+            @click="$emit('toggle')"
             class="text-black cursor-pointer"
           >
             <svgIcon name="hamburger-menu" class="h-14 w-14 mx-2" />
@@ -24,7 +24,11 @@
       </div>
     </div>
     <div>
-      <sideMenu :menuOpen="menuStatus" @toggle="toggle" @scrollMeTo="$emit('scrollMeTo', $event)" />
+      <sideMenu
+        :menuOpen="menuStatus"
+        @toggle="$emit('toggle')"
+        @scrollMeTo="$emit('scrollMeTo', $event)"
+      />
     </div>
   </div>
 </template>
@@ -35,10 +39,15 @@ export default {
   components: {
     sideMenu,
   },
+  props: {
+    menuStatus: {
+      type: Boolean,
+      default: false,
+    },
+  },
   data() {
     return {
       scrollTop: false,
-      menuStatus: false,
     };
   },
   computed: {},
@@ -49,9 +58,6 @@ export default {
       } else {
         this.scrollTop = false;
       }
-    },
-    toggle() {
-      this.menuStatus = !this.menuStatus;
     },
   },
   mounted() {

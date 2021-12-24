@@ -37,7 +37,7 @@
         </div>
       </div>
       <div class="text-center py-8 text-gray-400">
-        Copyright 2022 All rights reserved | Ege Ilgaz
+        Copyright 2022 All rights reserved | Ege
       </div>
     </div>
   </div>

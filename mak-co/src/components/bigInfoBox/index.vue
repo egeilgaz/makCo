@@ -27,7 +27,7 @@
         </div>
       </div>
       <div class="w-full mx-auto">
-        <img src="../../assets/food-1.jpg" alt="" />
+        <img src="../../assets/food-2.jpg" alt="" />
       </div>
       <div class="flex flex-col bg-white px-8 py-4">
         <div class="text-green-400 text-lg pt-3 mb-4 tracking-widest">
@@ -40,8 +40,8 @@
           {{ thirdContent.content }}
         </div>
       </div>
-      <div class="w-full mx-auto">
-        <img src="../../assets/food-1.jpg" alt="" />
+      <div class="mx-auto">
+        <img class="object-fill " src="../../assets/food-3.jpg" alt="" />
       </div>
     </div>
   </div>

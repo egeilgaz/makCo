@@ -10,7 +10,6 @@
       <div ref="home">
         <welcome-comp />
       </div>
-
       <head-lines
         :firstLine="firstObject.firstLine"
         :secondLine="firstObject.secondLine"
@@ -48,7 +47,7 @@
           :firstLine="secondObject.firstLine"
           :secondLine="secondObject.secondLine"
         />
-        <menu-comp class="md:px-24 xl:mx-48" :menuStatus="menuStatus" />
+        <!-- <menu-comp class="md:px-24 xl:mx-48" :menuStatus="menuStatus" /> -->
       </div>
 
       <services />
@@ -70,7 +69,7 @@ import headLines from "../src/components/headlines";
 import infoBox from "../src/components/infoBox";
 import locationBox from "../src/components/location";
 import chefs from "../src/components/chefs";
-import menuComp from "../src/components/menu";
+// import menuComp from "../src/components/menu";
 import services from "../src/components/services";
 import googleMap from "../src/components/googleMap";
 import footerComp from "../src/components/footer";
@@ -85,7 +84,7 @@ export default {
     infoBox,
     locationBox,
     chefs,
-    menuComp,
+    // menuComp,
     services,
     googleMap,
     footerComp,
@@ -97,7 +96,7 @@ export default {
       menuStatus: false,
       firstObject: {
         firstLine: "Find your best food",
-        secondLine: "Free Website Template For Restaurants Made by Colorlib",
+        secondLine: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis quidem, animi culpa",
       },
       secondObject: {
         firstLine: "Menu",
@@ -110,7 +109,7 @@ export default {
           secondHeader: "BEEF EMPANADAS",
           content:
             "Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.",
-          photoUrl: "food-1.jpg",
+          photoUrl: "food-2.jpg",
         },
         {
           id: 2,

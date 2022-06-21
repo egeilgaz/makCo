@@ -19,22 +19,8 @@
         It is a paradisematic country, in which roasted parts of sentences fly
         into your mouth.
       </div>
-      <div>
-        <!-- <img src="../../assets/makco-logo.png" alt="" /> -->
-        <!-- <div class="carousel px-16 mx-auto relative w-full">
-          <div class="carousel-item">
-            <div class="red"></div>
-          </div>
-          <div class="carousel-item">
-            <div class="green"></div>
-          </div>
-          <div class="carousel-item">
-            <div class="yellow"></div>
-          </div>
-          <div class="carousel-item">
-            <div class="violet"></div>
-          </div>
-        </div> -->
+      <div class="">
+        <img class="rounded-lg" src="../../assets/location.png" alt="">
       </div>
     </div>
   </div>
@@ -80,37 +66,6 @@ export default {
 };
 </script>
 
-<style scoped>
-.carousel {
-  height: 270px;
-  overflow: hidden;
-}
+<style >
 
-.carousel-item {
-  width: 100%;
-  height: 270px;
-  border: 1px solid #2e2e2e;
-  top: 0;
-  left: 100%;
-}
-.active {
-  left: 0;
-  transition: all 0.3s ease-out;
-}
-
-div {
-  height: 100%;
-}
-.red {
-  background-color: red;
-}
-.green {
-  background-color: green;
-}
-.yellow {
-  background-color: yellow;
-}
-.violet {
-  background-color: violet;
-}
 </style>

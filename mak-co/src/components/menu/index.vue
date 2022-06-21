@@ -28,20 +28,70 @@ export default {
       pastas: [
         {
           id: 1,
-          title: "burası yemeğin adı",
-          content: "burası yemeğin içeriği",
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
           price: "40tl",
+          image:"3-mantar.png"
+        },
+        {
+          id: 2,
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"noodle.png"
+        },
+        {
+          id: 3,
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"ramen2.png"
+        },
+        {
+          id: 4,
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"rabiatta.png"
         },
       ],
-      menuItems: [],
+      dessert: [
+        {
+          id: 1,
+          title: "Yemek Adı2",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"cake.png"
+        },
+        {
+          id: 2,
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"dessert.png"
+        },
+        {
+          id: 3,
+          title: "Yemek Adı",
+          content: "Yemek İçeriği, Yemek İçeriği",
+          price: "40tl",
+          image:"dessert2.png"
+        },
+      ]
     };
+  },
+  computed:{
+    menuItems(){
+      let menuItems
+      if(this.id==1) menuItems = this.pastas
+      else menuItems = this.dessert
+
+      return menuItems
+    }
+    
   },
   mounted() {
     this.isActive(1);
-    if(this.id == 1){
-      this.menuItems = this.pastas
-
-    }
   },
   methods: {
     isActive(id) {

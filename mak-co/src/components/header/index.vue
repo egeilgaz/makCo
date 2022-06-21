@@ -10,7 +10,7 @@
         "
       >
         <div class="flex flex-row-reverse py-5 pl-6"></div>
-        <div class="w-20 h-20 md:w-24 md:h-24 mx-auto my-auto">
+        <div @click="$emit('scrollUp')" class="w-20 h-20 md:w-24 md:h-24 mx-auto my-auto cursor-pointer">
           <img src="../../assets/makco-logo.jpeg" alt="" />
         </div>
         <div class="flex flex-row-reverse py-8 px-4">

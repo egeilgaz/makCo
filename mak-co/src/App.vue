@@ -4,6 +4,7 @@
       <header-comp
         @scrollMeTo="scrollMeTo"
         @toggle="toggle"
+        @scrollUp="scrollUp"
         :menuStatus="menuStatus"
       />
 
@@ -38,7 +39,7 @@
 
       <div class="bg-white">
         <div class="md:grid md:grid-cols-2 lg:w-128 lg:mx-auto xl:w-257">
-          <chefs v-for="index in 4" :key="index" :menuStatus="menuStatus" />
+          <chefs v-for="index in 2" :key="index" :menuStatus="menuStatus" />
         </div>
       </div>
 
@@ -47,7 +48,7 @@
           :firstLine="secondObject.firstLine"
           :secondLine="secondObject.secondLine"
         />
-        <!-- <menu-comp class="md:px-24 xl:mx-48" :menuStatus="menuStatus" /> -->
+        <menu-comp class="md:px-24 xl:mx-48" :menuStatus="menuStatus" />
       </div>
 
       <services />
@@ -69,7 +70,7 @@ import headLines from "../src/components/headlines";
 import infoBox from "../src/components/infoBox";
 import locationBox from "../src/components/location";
 import chefs from "../src/components/chefs";
-// import menuComp from "../src/components/menu";
+import menuComp from "../src/components/menu";
 import services from "../src/components/services";
 import googleMap from "../src/components/googleMap";
 import footerComp from "../src/components/footer";
@@ -84,7 +85,7 @@ export default {
     infoBox,
     locationBox,
     chefs,
-    // menuComp,
+    menuComp,
     services,
     googleMap,
     footerComp,
@@ -139,6 +140,9 @@ export default {
     toggle() {
       this.menuStatus = !this.menuStatus;
     },
+    scrollUp(){
+      window.scrollTo(0, 0);
+    }
   },
 };
 </script>
@@ -151,5 +155,8 @@ export default {
   color: #2c3e50;
   font-family: Avenir, Helvetica, ui-serif, sans-serif, Arial, Georgia, Cambria,
     "Times New Roman", Times, serif;
+}
+html {
+    scroll-behavior: smooth;
 }
 </style>

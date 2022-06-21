@@ -30,8 +30,7 @@ export default {
     return {
       headers: [
         { id: 1, header: "Makarna" },
-        { id: 2, header: "Dolgulu Makarna" },
-        { id: 3, header: "Tatlı" },
+        { id: 2, header: "Tatlı" },
       ],
     };
   },
